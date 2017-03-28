@@ -1,0 +1,62 @@
+<div class="page text-center">
+    <main class="page-content">
+        <section class="section-50 section-sm-100">
+<div class="shell-wide">
+<div class="range range-xs-center">
+<div class="cell-sm-6 cell-md-4 view-animate zoomInSmall delay-04 active"><a href="#" class="thumbnail-variant-3"><img src="images/index-01-566x401.jpg" alt="" width="566" height="401" class="img-responsive">
+<div class="caption text-center">
+<h3 class="text-italic">For Vegans</h3>
+<p class="big">Burger + French Fries + Drink</p>
+</div></a></div>
+<div class="cell-sm-6 cell-md-4 view-animate zoomInSmall delay-06 active"><a href="#" class="thumbnail-variant-3"><img src="images/index-02-566x401.jpg" alt="" width="566" height="401" class="img-responsive">
+<div class="caption text-center">
+<h3 class="text-italic">Order Online</h3>
+<p class="big">Available Every Day 9:00–23:00</p>
+</div></a></div>
+<div class="cell-sm-6 cell-md-4 offset-sm-top-30 offset-md-top-0 view-animate zoomInSmall delay-02 active"><a href="#" class="thumbnail-variant-3"><img src="images/index-03-566x401.jpg" alt="" width="566" height="401" class="img-responsive">
+<div class="caption text-center">
+<h3 class="text-italic">Cakes Specials</h3>
+<p class="big">Every Friday Only $0.99</p>
+</div></a></div>
+</div>
+</div>
+</section>
+   
+    <section class="section-50 section-sm-top-80 section-sm-bottom-100 bg-gray-lighter">
+    <h3>Notre Menu</h3>
+<div class="responsive-tabs responsive-tabs-button responsive-tabs-horizontal responsive-tabs-carousel offset-top-40" style="display: block; width: 100%;">
+   
+<ul class="resp-tabs-list">
+<li class="resp-tab-item" aria-controls="tab_item-0" role="tab" (click)="onGetFoodsByCategorie(1)">Panninis</li>
+<li class="resp-tab-item" aria-controls="tab_item-1" role="tab" (click)="onGetFoodsByCategorie(2)">Tajines</li>
+<li class="resp-tab-item" aria-controls="tab_item-2" role="tab" (click)="onGetFoodsByCategorie(3)">Sandwichs</li>
+<li class="resp-tab-item" aria-controls="tab_item-3" role="tab" (click)="onGetFoodsByCategorie(4)">Pizzas</li>
+<li class="resp-tab-item" aria-controls="tab_item-4" role="tab" (click)="onGetFoodsByCategorie(5)">Salades</li>
+<li class="resp-tab-item" aria-controls="tab_item-5" role="tab" (click)="onGetFoodsByCategorie(6)">Desserts</li>
+<li class="resp-tab-item" aria-controls="tab_item-0" role="tab" (click)="onGetFoodsByCategorie(7)">Boissons</li>
+</ul>
+
+<div class="resp-tabs-container text-left">
+<div id="resp_table">
+<slick-slider class="slick-tab-centered" *ngIf="foods" > 
+<div class="item" style="width: 450px;" *ngFor= "let food of foods">
+    <div class="thumbnail-menu-modern">  
+<figure><img src="/{% food.image_principale %}" alt="" width="310" height="260" class="img-responsive"/>
+</figure>
+<div class="caption">
+<h5><a href="#" class="link link-default">{% food.designation%}</a></h5>
+<p class="text-italic"> {% food.description %} </p>
+<p class="price">{% food.prix %} DH</p>
+<a href="#" class="btn btn-shape-circle btn-burnt-sienna offset-top-15">Commander</a>
+</div>
+ </div>
+  </div>
+    
+</slick-slider>  
+
+</div>
+</div>
+</div>
+    </section>
+      </main>
+</div>
